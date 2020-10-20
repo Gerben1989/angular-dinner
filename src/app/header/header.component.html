@@ -6,8 +6,8 @@
 
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li><a href="#">Recipes</a></li>
-                <li><a href="#">Shopping List</a></li>
+                <li><a href="#" (click)="onNavigate('recipes')"><b *ngIf="currentPage === 'recipes'; else regularRecipes">Recipes</b><ng-template #regularRecipes>Recipes</ng-template></a></li>
+                <li><a href="#" (click)="onNavigate('shopping')"><b *ngIf="currentPage === 'shopping'; else regularShopping">Shopping List</b><ng-template #regularShopping>Shopping List</ng-template></a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
